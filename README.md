@@ -27,7 +27,7 @@ Translations are stored in JSON files that contain entries like this:
 "tw.menuBar.code": {
     "defaultMessage": "Source Code",
     "description": "Text for source code link in the Help menu",
-    "message": ""
+    "message": null
 },
 ```
 
@@ -37,9 +37,9 @@ Translations are stored in JSON files that contain entries like this:
 
 `description` describes more about the message, where it's displayed, the context, etc. Do not change this.
 
-`message` is the actual translated message. An empty string (`""`) means that this message has not been translated into this language. Translate the english message (defaultMessage) and write the translated message here.
+`message` is the actual translated message. `null` means that this message has not been translated into this language. Translate the english message (defaultMessage) and write the translated message here as a JSON string. For example, to translate `Turbo Mode` into Spanish, you would write `"Modo Turbo"` instead of `null`.
 
-Remember, this file is JSON. That means that strings to have "quotes around them" and that you may need to escape certain special characters (although you probably won't have to escape anything)
+Remember, this file is JSON. That means that strings to have "quotes around them" and that you may need to escape certain special characters (although you probably won't have to do any escaping)
 
 Commit your changes and submit a pull request to this repository.
 
@@ -51,7 +51,7 @@ Sometimes messages can contain variables, for example:
 "tw.framerateIndicator": {
     "defaultMessage": "{framerate} FPS",
     "description": "Label indicating project framerate",
-    "message": ""
+    "message": null
 },
 ```
 
@@ -63,12 +63,12 @@ It's also possible that the variable is replaced with another translation, for e
 "tw.footer.host": {
     "defaultMessage": "Hosting for TurboWarp is provided by {fosshost}.",
     "description": "Host credit",
-    "message": ""
+    "message": null
 },
 "tw.footer.host.fosshost": {
     "defaultMessage": "fosshost.org",
     "description": "Link to fosshost.org",
-    "message": ""
+    "message": null
 },
 ```
 

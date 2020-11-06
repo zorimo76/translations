@@ -48,7 +48,7 @@ const mergeTranslations = (existing, messages) => {
         console.warn(`not copying translation: default changed: ${key}`);
       }
     } else {
-      value.message = "";
+      value.message = null;
     }
   }
   for (const key of Object.keys(existing)) {

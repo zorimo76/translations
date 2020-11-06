@@ -14,7 +14,7 @@ const readLanguage = (lang) => {
   const result = {};
   for (const key of Object.keys(parsedMessages)) {
     const message = parsedMessages[key].message;
-    // Do not write empty (missing) messages.
+    // Do not write missing messages.
     if (message) {
       result[key] = message;
     }
