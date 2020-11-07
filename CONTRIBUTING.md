@@ -39,6 +39,8 @@ Translations are stored in JSON files that contain entries like this:
 },
 ```
 
+If you're not sure how something should be translated or think that it doesn't need to be translated, that's perfectly fine. Just leave it as null.
+
 Remember, this file is JSON. That means that strings need to have "quotes around them" and that you may need to escape certain special characters (although you probably won't have to do any escaping)
 
 Commit your changes and submit a pull request to this repository.
