@@ -11,9 +11,7 @@ If you have issues following this guide, please open an issue: https://github.co
 
 First, make a fork of this repository. You can do everything here from the GitHub website. You don't need to clone the repository if you don't want to.
 
-Then, go into the `languages` folder and find the file for your language. This is the two-letter code given to your language. Spanish is `es`, Japanese is `ja`, etc. If you're not sure what language code to look for, look under the "639-1" column for your language here: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
-
-Languages need to be added manually, so if you can't find your language, make an issue here: https://github.com/TurboWarp/translations/issues
+Then, go into the `languages` folder and find the file for your language. See [languages.md](languages.md) if you're not sure which file to open.
 
 Translations are stored in JSON files that contain entries like this:
 

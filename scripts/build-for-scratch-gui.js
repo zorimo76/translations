@@ -29,7 +29,7 @@ const outputLanguage = (lang, processed) => {
   fs.writeFileSync(outFile, JSON.stringify(processed))
 };
 
-for (const lang of LANGUAGES) {
+for (const lang of Object.keys(LANGUAGES)) {
   console.log(`Processing ${lang}`);
   const processed = readLanguage(lang);
   outputLanguage(lang, processed);

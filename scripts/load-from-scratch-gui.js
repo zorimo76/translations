@@ -96,7 +96,7 @@ for (const file of messageFiles) {
   }
 }
 
-for (const language of LANGUAGES) {
+for (const language of Object.keys(LANGUAGES)) {
   console.log(`processing ${language}`);
   processLanguage(language, messages);
 }
