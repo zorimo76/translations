@@ -1,3 +1,4 @@
+const yaml = require('js-yaml');
 const {validateLanguage, validateMessage} = require('./validate-lib');
 
 const m = {
@@ -33,18 +34,18 @@ const expectInvalidMessage = (key, message) => {
   }
 }
 
-// TODO
-// expectValidLanguage(JSON.stringify({
-//   'tw.123': m
-// }));
-// expectInvalidLanguage(JSON.stringify({
-//   'tw.123': null
-// }));
-// expectInvalidLanguage('null');
-// expectInvalidLanguage('123');
-// expectInvalidLanguage('"123"');
-// expectInvalidLanguage('[]');
-// expectInvalidLanguage('{');
+expectValidLanguage(yaml.safeDump({
+  'tw.123': m
+}));
+expectInvalidLanguage(yaml.safeDump({
+  'tw.123': null
+}));
+expectInvalidLanguage('null');
+expectInvalidLanguage('123');
+expectInvalidLanguage('"123"');
+expectInvalidLanguage('[]');
+expectInvalidLanguage('{');
+expectInvalidLanguage('e:');
 
 expectValidMessage('tw.123', m);
 expectInvalidMessage('abc.123', m);

@@ -41,34 +41,30 @@ If you're not sure how something should be translated or think that it doesn't n
 
 Commit your changes and submit a pull request to this repository.
 
-<!-- TODO -->
-<!-- ## Special syntax
+## Special syntax
 
 Sometimes messages can contain variables, for example:
 
-```json
-"tw.framerateIndicator": {
-    "defaultMessage": "{framerate} FPS",
-    "description": "Label indicating project framerate",
-    "message": null
-},
+```yaml
+tw.framerateIndicator:
+  defaultMessage: '{framerate} FPS'
+  description: Label indicating project framerate
+  message: null
 ```
 
 `{framerate}` is a variable that will be replaced with something else. In this case, `{framerate}` will become a number like `60`. Make sure your translated message contains the same variable. Do not translate the name of the variable.
 
 It's also possible that the variable is replaced with another translation, for example:
 
-```json
-"tw.footer.host": {
-    "defaultMessage": "Hosting for TurboWarp is provided by {fosshost}.",
-    "description": "Host credit",
-    "message": null
-},
-"tw.footer.host.fosshost": {
-    "defaultMessage": "fosshost.org",
-    "description": "Link to fosshost.org",
-    "message": null
-},
+```yaml
+tw.footer.host:
+  defaultMessage: 'Hosting for TurboWarp is provided by {fosshost}.'
+  description: Host credit
+  message: null
+tw.footer.host.fosshost:
+  defaultMessage: fosshost.org
+  description: Link to fosshost.org
+  message: null
 ```
 
-When this happens, the variable's translation is usually directly below the primary message. In this case, `{fosshost}` will be replaced with the translation of `tw.footer.host.fosshost`. This generally only happens when a translation contains a link, for example. -->
+When this happens, the variable's translation is usually directly below the primary message. In this case, `{fosshost}` will be replaced with the translation of `tw.footer.host.fosshost`. This generally only happens when a translation contains a link, for example.
