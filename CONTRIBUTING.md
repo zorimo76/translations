@@ -37,6 +37,8 @@ gui.turboMode.active:
   message": Modo Turbo
 ```
 
+If you're not sure how something should be translated or think that it doesn't need to be translated, that's perfectly fine. Just leave it as null.
+
 Commit your changes and submit a pull request to this repository.
 
 <!-- TODO -->
