@@ -39,7 +39,7 @@ Translations are stored in JSON files that contain entries like this:
 
 `message` is the actual translated message. `null` means that this message has not been translated into this language. Translate the english message (defaultMessage) and write the translated message here as a JSON string. For example, to translate `Turbo Mode` into Spanish, you would write `"Modo Turbo"` instead of `null`.
 
-Remember, this file is JSON. That means that strings to have "quotes around them" and that you may need to escape certain special characters (although you probably won't have to do any escaping)
+Remember, this file is JSON. That means that strings need to have "quotes around them" and that you may need to escape certain special characters (although you probably won't have to do any escaping)
 
 Commit your changes and submit a pull request to this repository.
 
@@ -55,7 +55,7 @@ Sometimes messages can contain variables, for example:
 },
 ```
 
-`{framerate}` is a variable that will be replaced with something else. In this, `{framerate}` will become a number like `60`. Make sure your translated message contains the same variable. Do not translate the name of the variable.
+`{framerate}` is a variable that will be replaced with something else. In this case, `{framerate}` will become a number like `60`. Make sure your translated message contains the same variable. Do not translate the name of the variable.
 
 It's also possible that the variable is replaced with another translation, for example:
 
@@ -72,4 +72,4 @@ It's also possible that the variable is replaced with another translation, for e
 },
 ```
 
-Here, `{fosshost}` will be replaced with the translation of `tw.footer.host.fosshost`.
+Here, `{fosshost}` will be replaced with the translation of `tw.footer.host.fosshost`. When this happens, the variable's translation is usually directly below the primary message.
