@@ -35,7 +35,7 @@ Translations are stored in JSON files that contain entries like this:
 "gui.turboMode.active": {
     "defaultMessage": "Turbo Mode",
     "description": "Label indicating turbo mode is active",
-    "message": "Mode Turbo"
+    "message": "Modo Turbo"
 },
 ```
 
