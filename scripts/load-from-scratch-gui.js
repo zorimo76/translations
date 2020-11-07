@@ -80,7 +80,7 @@ const messages = {};
 
 for (const file of messageFiles) {
   if (!file.endsWith('.json')) {
-    console.warn(`skipping ${path}: not json`);
+    console.warn(`skipping ${file}: not json`);
     continue;
   }
 
