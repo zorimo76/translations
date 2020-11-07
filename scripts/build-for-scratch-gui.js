@@ -16,9 +16,11 @@ const readLanguage = (lang) => {
   const parsedMessages = YAML.parse(content);
   const result = {};
   for (const key of Object.keys(parsedMessages)) {
-    const message = parsedMessages[key].message;
-    // Do not write missing messages.
-    if (message) {
+    const value = parsedMessages[key];
+    const message = value.message;
+    const defaultMessage = value.defaultMessage;
+    // Do not write missing messages, or messages that are identical to their English translation.
+    if (message && message !== defaultMessage) {
       result[key] = message;
     }
   }
