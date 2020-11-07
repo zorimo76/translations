@@ -17,5 +17,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 10.x
-    - run: node scripts/validate-lib-test.js
-    - run: node scripts/validate.js
+    - name: Validator test suite
+      run: node scripts/validate-test.js
+    - name: Parse translations
+      run: node scripts/build-for-scratch-gui.js

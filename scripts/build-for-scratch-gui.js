@@ -1,6 +1,8 @@
 const fs = require('fs');
 const pathUtil = require('path');
 
+require('./validate');
+
 const {
   LANGUAGES_DIR,
   LANGUAGES,
@@ -28,7 +30,7 @@ const outputLanguage = (lang, processed) => {
 };
 
 for (const lang of LANGUAGES) {
-  console.log(`processing ${lang}`);
+  console.log(`Processing ${lang}`);
   const processed = readLanguage(lang);
   outputLanguage(lang, processed);
 }

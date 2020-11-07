@@ -31,10 +31,7 @@ for (const lang of LANGUAGES) {
   validateLanguage(content, errorCallback);
 }
 
-if (valid) {
-  console.log('VALID');
-  process.exit(0);
-} else {
+if (!valid) {
   console.log('INVALID');
   process.exit(1);
 }
