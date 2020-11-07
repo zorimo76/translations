@@ -17,7 +17,7 @@ const errorCallback = (error) => {
   valid = false;
 };
 
-for (const lang of LANGUAGES) {
+for (const lang of Object.keys(LANGUAGES)) {
   console.log(`Validating ${lang}`);
   const langFile = pathUtil.join(LANGUAGES_DIR, `${lang}.json`);
   let content;
