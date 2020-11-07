@@ -1,17 +1,19 @@
 # Submitting Translations
 
+If you have issues following this guide, please open an issue: https://github.com/TurboWarp/translations/issues
+
 ## Requirements
 
- * You must be fluent in both English and another language. Taking one year of a language class in high school does not make you "fluent".
+ * You must be fluent in both English and another language. Taking one year of a language class in high school does not make you fluent.
  * Machine translations (Google Translate, DeepL, etc.) are not allowed.
 
 ## Writing translations
 
 First, make a fork of this repository. You can do everything here from the GitHub website. You don't need to clone the repository if you don't want to.
 
-Then, go into the `languages` folder and find the file for your language. This is the two-letter code given to your language. Spanish is `es`, Japanese is `ja`, etc. If you're not sure what language code to look for, look under the "639-1" column here for your language here: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+Then, go into the `languages` folder and find the file for your language. This is the two-letter code given to your language. Spanish is `es`, Japanese is `ja`, etc. If you're not sure what language code to look for, look under the "639-1" column for your language here: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 
-If you cannot find the file for your language, please open an issue or post a comment here: TODO
+Languages need to be added manually, so if you can't find your language, make an issue here: https://github.com/TurboWarp/translations/issues
 
 Translations are stored in JSON files that contain entries like this:
 
@@ -29,7 +31,7 @@ Translations are stored in JSON files that contain entries like this:
 
 `description` describes more about the message, where it's displayed, the context, etc. Do not change this.
 
-`message` is the actual translated message. `null` means that this message has not been translated into this language and the English version will be used instead. Translate the message to the desired language and write the translated message here as a JSON string. For example, to translate `Turbo Mode` into Spanish, you would write `"Modo Turbo"` instead of `null`.
+`message` is the translated message. This is what you should change. `null` means that this message has not been translated into this language and the English version will be used instead. Write the translated message here as a JSON string. For example, to translate `Turbo Mode` into Spanish, you would write `"Modo Turbo"` instead of `null`.
 
 Remember, this file is JSON. That means that strings need to have "quotes around them" and that you may need to escape certain special characters (although you probably won't have to do any escaping)
 
