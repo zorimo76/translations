@@ -66,7 +66,9 @@ const readLanguageFile = (path) => {
     return {};
   }
   const content = fs.readFileSync(path, { encoding: 'utf8' });
-  return YAML.parse(content);
+  return YAML.parse(content, {
+    prettyErrors: true
+  });
 };
 
 const processLanguage = (lang, messages) => {

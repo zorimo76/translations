@@ -5,7 +5,9 @@ const isObject = (val) => typeof val === 'object' && val !== null && !Array.isAr
 const validateLanguage = (content, errorCallback) => {
   let parsedContent;
   try {
-    parsedContent = YAML.parse(content);
+    parsedContent = YAML.parse(content, {
+      prettyErrors: true
+    });
   } catch (e) {
     errorCallback(new Error(`Invalid YAML: ${e.message}`));
     return;
