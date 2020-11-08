@@ -34,12 +34,17 @@ tw.menuBar.code:
 gui.turboMode.active:
   defaultMessage: Turbo Mode
   description: Label indicating turbo mode is active
-  message": Modo Turbo
+  message: Modo Turbo
 ```
 
-If you're not sure how something should be translated or think that it doesn't need to be translated, that's perfectly fine. Just leave it as null.
+Keep the following in mind while writing translations:
 
-Commit your changes and submit a pull request to this repository.
+ - If the default message ends with a period, your translation should end with a period, etc.
+ - If you don't know how to translate something, just leave it as null. A missing translation is better than an incorrect translation.
+ - If something does not need to be translated, feel free to leave it as null.
+ - Don't worry too hard about YAML syntax. Just focus on the translations and we can worry about the technical bits.
+
+Commit your changes and submit a pull request to this repository. Please enable "Allow edits from maintainers" so that we can fix minor issues without bugging you.
 
 ## Special syntax
 
