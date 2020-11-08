@@ -52,11 +52,11 @@ const validateMessage = (key, value) => {
     throw new Error(`${key}: Invalid "description"`);
   }
 
-  if (!valueKeys.includes('defaultMessage')) {
-    throw new Error(`${key}: Missing "defaultMessage"`);
+  if (!valueKeys.includes('englishMessage')) {
+    throw new Error(`${key}: Missing "englishMessage"`);
   }
-  if (typeof value.defaultMessage !== 'string') {
-    throw new Error(`${key}: Invalid "defaultMessage"`);
+  if (typeof value.englishMessage !== 'string') {
+    throw new Error(`${key}: Invalid "englishMessage"`);
   }
 
   if (valueKeys.length !== 3) {
@@ -64,18 +64,18 @@ const validateMessage = (key, value) => {
   }
 
   if (value.message !== null) {
-    const defaultMessageVariables = value.defaultMessage.match(/{\w+}/g);
-    const defaultMessageVariableCount = defaultMessageVariables === null ? 0 : defaultMessageVariables.length;
+    const englishVariables = value.englishMessage.match(/{\w+}/g);
+    const englishVariableCount = englishVariables === null ? 0 : englishVariables.length;
     const messageVariables = value.message.match(/{\w+}/g);
     const messageVariablesCount = messageVariables === null ? 0 : messageVariables.length;
 
-    if (defaultMessageVariableCount !== messageVariablesCount) {
-      throw new Error(`${key}: Incorrect number of variables: expected ${defaultMessageVariableCount} but found ${messageVariablesCount}`);
+    if (englishVariableCount !== messageVariablesCount) {
+      throw new Error(`${key}: Incorrect number of variables: expected ${englishVariableCount} but found ${messageVariablesCount}`);
     }
 
     for (let i = 0; i < messageVariablesCount; i++) {
-      if (defaultMessageVariables[i] !== messageVariables[i]) {
-        throw new Error(`${key}: Incorrect variables: expected ${defaultMessageVariables[i]} but found ${messageVariables[i]}`);
+      if (englishVariables[i] !== messageVariables[i]) {
+        throw new Error(`${key}: Incorrect variables: expected ${englishVariables[i]} but found ${messageVariables[i]}`);
       }
     }
   }
