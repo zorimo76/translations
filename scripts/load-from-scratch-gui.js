@@ -46,7 +46,7 @@ const mergeTranslations = (existing, messages) => {
       if (existingValue.defaultMessage === value.defaultMessage) {
         value.message = existingValue.message;
       } else {
-        console.warn(`not copying translation: default changed: ${key}`);
+        console.warn(`Not copying translation: default changed: ${key}`);
       }
     } else {
       value.message = null;
@@ -54,7 +54,7 @@ const mergeTranslations = (existing, messages) => {
   }
   for (const key of Object.keys(existing)) {
     if (!result.hasOwnProperty(key)) {
-      console.warn(`not copying translation: missing: ${key}`);
+      console.warn(`Not copying translation: removed: ${key}`);
     }
   }
 
@@ -81,7 +81,7 @@ const messages = {};
 
 for (const file of messageFiles) {
   if (!file.endsWith('.json')) {
-    console.warn(`skipping ${file}: not json`);
+    console.warn(`Skipping ${file}: not json`);
     continue;
   }
 
@@ -98,6 +98,6 @@ for (const file of messageFiles) {
 }
 
 for (const language of Object.keys(LANGUAGES)) {
-  console.log(`processing ${language}`);
+  console.log(`Processing ${language}`);
   processLanguage(language, messages);
 }
