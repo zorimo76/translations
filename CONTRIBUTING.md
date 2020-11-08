@@ -63,7 +63,7 @@ It's also possible that the variable is replaced with another translation, for e
 
 ```yaml
 tw.footer.host:
-  defaultMessage: 'Hosting for TurboWarp is provided by {fosshost}.'
+  defaultMessage: Hosting for TurboWarp is provided by {fosshost}.
   description: Host credit
   message: null
 tw.footer.host.fosshost:
