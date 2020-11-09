@@ -9,7 +9,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - run: git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
     - name: Use Node.js
       uses: actions/setup-node@v1
       with:
@@ -20,5 +19,3 @@ jobs:
       run: npm test
     - name: Parse translations
       run: npm run build
-    - name: Test diff
-      run: git diff origin/master HEAD > diff.txt && node scripts/validate-diff.js diff.txt
