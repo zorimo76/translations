@@ -2,7 +2,7 @@
 If you do not see your language here, open an issue: https://github.com/TurboWarp/translations/issues/new
 
 | Language | File |
-| -: | :- |
+| :-: | :-: |
 | Аҧсшәа | ab.yaml |
 | العربية | ar.yaml |
 | አማርኛ | am.yaml |
