@@ -23,3 +23,5 @@ jobs:
       run: npm test
     - name: Parse translations
       run: npm run build
+    - name: Test diff
+      run: git diff origin/master HEAD > diff.txt && node scripts/validate-diff.js diff.txt
