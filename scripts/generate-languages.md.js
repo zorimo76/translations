@@ -11,7 +11,7 @@ fs.writeFileSync(
     'If you do not see your language here, open an issue: https://github.com/TurboWarp/translations/issues/new',
     '',
     '| Language | File |',
-    '| -: | :- |',
+    '| :-: | :-: |',
     ...Array.from(Object.entries(LANGUAGES))
       .map(([code, {name}]) => `| ${name} | ${code}.yaml |`)
   ].join('\n')
