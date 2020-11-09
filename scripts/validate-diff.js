@@ -12,10 +12,7 @@ for (var i = 0; i < lines.length; i++) {
   if (!line.startsWith('+') && !line.startsWith('-')) {
     continue;
   }
-  if (line.startsWith('---')) {
-    continue;
-  }
-  if (line.startsWith('+++')) {
+  if (line.startsWith('+++') || line.startsWith('---')) {
     currentFile = line.substr(6);
     continue;
   }
