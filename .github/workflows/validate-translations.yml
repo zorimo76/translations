@@ -1,6 +1,12 @@
-name: Validate translations
+name: Internal tests
 
-on: [push, pull_request]
+on:
+  push:
+    paths:
+    - '**.js'
+  pull_request:
+    paths:
+    - '**.js'
 
 jobs:
   build:
@@ -17,5 +23,3 @@ jobs:
       run: npm ci
     - name: Internals tests
       run: npm test
-    - name: Parse translations
-      run: npm run build
