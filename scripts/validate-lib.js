@@ -28,6 +28,13 @@ const validateLanguage = (content, errorCallback) => {
   }
 };
 
+const getPunctuation = (value) => {
+  if (value.endsWith('.')) return '.';
+  if (value.endsWith('!')) return '!';
+  if (value.endsWith('?')) return '?';
+  return 'none';
+};
+
 const validateMessage = (key, value) => {
   if (!key.startsWith('tw.')) {
     throw new Error(`${key}: Does not start with tw.`);
@@ -77,6 +84,12 @@ const validateMessage = (key, value) => {
       if (englishVariables[i] !== messageVariables[i]) {
         throw new Error(`${key}: Incorrect variables: expected ${englishVariables[i]} but found ${messageVariables[i]}`);
       }
+    }
+
+    const englishPunctuation = getPunctuation(value.englishMessage);
+    const messagePunctuation = getPunctuation(value.message);
+    if (englishPunctuation !== messagePunctuation) {
+      throw new Error(`${key}: Incorrect punctuation: expected ${englishPunctuation} but fond ${messagePunctuation}`);
     }
   }
 };

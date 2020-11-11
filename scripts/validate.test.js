@@ -111,3 +111,43 @@ expectInvalidMessage('tw.123', {
   englishMessage: 'foo',
   message: '{bar}'
 });
+expectValidMessage('tw.123', {
+  ...m,
+  englishMessage: 'Hello!',
+  message: 'Bye!'
+});
+expectValidMessage('tw.123', {
+  ...m,
+  englishMessage: 'Hello',
+  message: 'Bye'
+});
+expectValidMessage('tw.123', {
+  ...m,
+  englishMessage: 'Hello.',
+  message: 'Bye.'
+});
+expectInvalidMessage('tw.123', {
+  ...m,
+  englishMessage: 'Hello!',
+  message: 'Bye.'
+});
+expectInvalidMessage('tw.123', {
+  ...m,
+  englishMessage: 'Hello!',
+  message: 'Bye'
+});
+expectInvalidMessage('tw.123', {
+  ...m,
+  englishMessage: 'Hello?',
+  message: 'Bye!'
+});
+expectInvalidMessage('tw.123', {
+  ...m,
+  englishMessage: 'Hello',
+  message: 'Bye.'
+});
+expectInvalidMessage('tw.123', {
+  ...m,
+  englishMessage: 'Hello.',
+  message: 'Bye'
+});
