@@ -7,12 +7,18 @@ const {
   LANGUAGES,
   OUT_DIR
 } = require('./common');
+const {validateLanguage} = require('./validate-lib');
 
-require('./validate');
+let valid = true;
+const validateErrorCallback = (error) => {
+  console.error(error.message);
+  valid = false;
+};
 
 const readLanguage = (lang) => {
   const languageFile = pathUtil.join(LANGUAGES_DIR, `${lang}.yaml`);
   const content = fs.readFileSync(languageFile, { encoding: 'utf8' });
+  validateLanguage(content, validateErrorCallback);
   const parsedMessages = YAML.parse(content, {
     prettyErrors: true
   });
@@ -29,13 +35,17 @@ const readLanguage = (lang) => {
   return result;
 };
 
-const outputLanguage = (lang, processed) => {
-  const outFile = pathUtil.join(OUT_DIR, `${lang}.json`);
-  fs.writeFileSync(outFile, JSON.stringify(processed));
-};
-
+const result = {};
 for (const lang of Object.keys(LANGUAGES)) {
   console.log(`Processing ${lang}`);
   const processed = readLanguage(lang);
-  outputLanguage(lang, processed);
+  result[lang] = processed;
+}
+
+console.log('Writing');
+fs.writeFileSync(pathUtil.join(OUT_DIR, 'translations.json'), JSON.stringify(result, null, 4));
+
+if (!valid) {
+  console.log('INVALID');
+  process.exit(1);
 }

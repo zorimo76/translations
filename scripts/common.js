@@ -6,7 +6,6 @@ module.exports = {
   OUT_DIR: pathUtil.join(__dirname, '../out'),
   LANGUAGES_DIR: pathUtil.join(__dirname, '../languages'),
   LANGUAGES_MD: pathUtil.join(__dirname, '../languages.md'),
-  LANGUAGES_JS: pathUtil.join(__dirname, '../languages.js'),
   LANGUAGES: {
     // https://github.com/LLK/scratch-l10n/blob/master/src/supported-locales.js
     'ab': {name: 'Аҧсшәа'},
