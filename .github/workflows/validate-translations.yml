@@ -1,12 +1,12 @@
-name: Internal tests
+name: Validate translations
 
 on:
   push:
     paths:
-    - '**.js'
+    - '**.yaml'
   pull_request:
     paths:
-    - '**.js'
+    - '**.yaml'
 
 jobs:
   build:
@@ -15,11 +15,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - run: git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
     - name: Use Node.js
       uses: actions/setup-node@v1
       with:
         node-version: 10.x
     - name: Install dependencies
       run: npm ci
-    - name: Internals tests
-      run: npm test
+    - name: Parse translations
+      run: npm run build
+    - name: Validate diff
+      run: git diff origin/master HEAD -- languages > diff.txt && node scripts/validate-diff.js diff.txt
