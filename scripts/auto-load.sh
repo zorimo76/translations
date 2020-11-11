@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 start=$(pwd)
 
 cd ../scratch-gui
