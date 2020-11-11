@@ -43,7 +43,7 @@ const mergeTranslations = (existing, messages) => {
     const existingValue = existing[key];
     if (existingValue) {
       // If the english version changed, do not copy.
-      if (existingValue.englishMessage === value.defaultMessage) {
+      if (existingValue.englishMessage === value.englishMessage) {
         value.message = existingValue.message;
       } else {
         value.message = null;
