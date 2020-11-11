@@ -109,7 +109,7 @@ tw.viewFeaturedProjects:
 tw.featuredProjectsStudio:
   englishMessage: View studio on Scratch.
   description: Link to turbowarp featured projects studio
-  message: Voir le studio sur scratch
+  message: Voir le studio sur scratch.
 tw.framerateIndicator:
   englishMessage: "{framerate} FPS"
   description: Label indicating project framerate
