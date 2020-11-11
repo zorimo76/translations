@@ -35,7 +35,10 @@ const readLanguage = (lang) => {
   return result;
 };
 
-const result = {};
+const result = {
+  '__README__': 'Imported from https://github.com/TurboWarp/translations -- DO NOT EDIT BY HAND'
+};
+
 for (const lang of Object.keys(LANGUAGES)) {
   console.log(`Processing ${lang}`);
   const processed = readLanguage(lang);
