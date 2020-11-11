@@ -1,7 +1,7 @@
 tw.gui.crashMessage.description:
   englishMessage: We are so sorry, but it looks like TurboWarp has crashed. Please refresh your page to try again.
   description: Message to inform the user that page has crashed.
-  message: Nous sommes désolés, mais il semble que TurboWarp s'est crashé. Actualisez la page pour réessayer.
+  message: Nous sommes désolés, mais il semble que TurboWarp s'ait crashé. Actualisez la page pour réessayer.
 tw.loadingMessage:
   englishMessage: Loading project …
   description: Default loading message
@@ -33,15 +33,15 @@ tw.menuBar.cloudUnavailable:
 tw.menuBar.advanced:
   englishMessage: Advanced
   description: Text for advanced settings dropdown menu
-  message: Avancé
+  message: Paramètres avancées
 tw.menuBar.hqpOff:
   englishMessage: Turn off High Quality Pen
   description: Menu bar item for turning off high quality pen
-  message: null
+  message: Désactiver le stylo Haute Qualité
 tw.menuBar.hqpOn:
   englishMessage: Turn on High Quality Pen
   description: Menu bar item for turning on high quality pen
-  message: null
+  message: Activer le stylo Basse Qualité
 tw.menuBar.compilerOff:
   englishMessage: Disable Compiler
   description: Menu bar item for disabling the compiler
@@ -153,51 +153,53 @@ tw.footer.privacy:
 tw.loader.generic:
   englishMessage: Loading project …
   description: Initial generic loading message
-  message: null
+  message: Chargement du projet …
 tw.loader.data:
   englishMessage: Loading project data …
   description: Appears when loading project data
-  message: null
+  message: Chargement du contenu du projet …
 tw.loader.assets.known:
   englishMessage: Loading assets ({complete}/{total}) …
   description: Appears when loading project assets and amount of assets is known
-  message: null
+  message: Chargement des assets ({complete}/{total}) …
 tw.loader.assets.unknown:
   englishMessage: Loading assets …
   description: Appears when loading project assets but amount of assets is unknown
-  message: null
+  message: Chargement des assets …
 tw.menuBar.advancedHelp:
   englishMessage: Advanced Settings Help
   description: Menu bar item for advanced settings help
-  message: null
+  message: Aide pour les paramètres avancée
 tw.menuBar.translate:
   englishMessage: Help Translate TurboWarp
   description: Menu bar item for translating TurboWarp link
-  message: null
+  message: Aidez-nous à traduire TurboWarp
 tw.examples.view:
   englishMessage: Click to view example projects.
   description: Text to view example projects
-  message: null
+  message: Cliquez ici pour voir des exemples de projets
 tw.examples.studioLink:
   englishMessage: View studio on Scratch.
   description: Link to turbowarp examples studio
-  message: null
+  message: Regarder le studio sur Scratch
 tw.studioview.authorAttribution:
   englishMessage: by {author}
   description: Displayed in StudioView under project title to credit creator
-  message: null
+  message: par {author}
 tw.studioview.hoverText:
   englishMessage: "{title} by {author}"
   description: Displayed in StudioView when hovering on a project
-  message: null
+  message: {title} par {author}
 tw.studioview.error:
   englishMessage: There was an error loading the next page of projects.
   description: Displayed in StudioView when an error occurs
-  message: null
+  message: Il y a eu un problème pendant le chargement de la page suivante remplie de projets.
 tw.usernamePrompt:
   englishMessage: |-
     Can't connect to cloud variables because username is invalid. You can change it in Edit > Change Username.
 
     It might be too long, contain invalid characters, or be used by someone else. (Current username: {username})
   description: Warning that appears when connecting to cloud variable server if the username is invalid
-  message: null
+message: On ne peut pas connecter aux variables clouds car le nom d'utilisateur est invalide. Vous pouvez le changer dans Modifier > changer votre nom d'utilisateur.
+
+Ton nom d'utilisateur doit être trop long, contenir des caractrès invalides, ou peut être utilisé par quelqu'un d'autre (Nom utilisateur actuel: {username})
