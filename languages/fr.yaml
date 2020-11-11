@@ -64,23 +64,23 @@ tw.menuBar.help:
   message: Aide
 tw.menuBar.code:
   englishMessage: Source Code
-  description: Text for source code link in the Help menu
+  description: Menu bar item for source code link
   message: Code source
 tw.menuBar.feedback:
   englishMessage: Feedback & Bugs
-  description: Text for feedback link in the Help menu
+  description: Menu bar item for feedback link
   message: null
 tw.menuBar.privacy:
   englishMessage: Privacy
-  description: Text for privacy policy link in the Help menu
+  description: Menu bar item for privacy policy link
   message: Confidentialitée
 tw.menuBar.embed:
   englishMessage: Embedding
-  description: Text for embedding link in the Help menu
+  description: Menu bar item for embedding link
   message: Intégrer
 tw.menuBar.parameters:
   englishMessage: URL Parameters
-  description: Text for url parameters link in the Help menu
+  description: Menu bar item for URL parameters link
   message: Paramères URL
 tw.giveFeedback:
   englishMessage: Give Feedback
@@ -150,6 +150,30 @@ tw.footer.privacy:
   englishMessage: Privacy
   description: Link in footer to privacy policy
   message: Confidentialité
+tw.loader.generic:
+  englishMessage: Loading project …
+  description: Initial generic loading message
+  message: null
+tw.loader.data:
+  englishMessage: Loading project data …
+  description: Appears when loading project data
+  message: null
+tw.loader.assets.known:
+  englishMessage: Loading assets ({complete}/{total}) …
+  description: Appears when loading project assets and amount of assets is known
+  message: null
+tw.loader.assets.unknown:
+  englishMessage: Loading assets …
+  description: Appears when loading project assets but amount of assets is unknown
+  message: null
+tw.menuBar.advancedHelp:
+  englishMessage: Advanced Settings Help
+  description: Menu bar item for advanced settings help
+  message: null
+tw.menuBar.translate:
+  englishMessage: Help Translate TurboWarp
+  description: Menu bar item for translating TurboWarp link
+  message: null
 tw.examples.view:
   englishMessage: Click to view example projects.
   description: Text to view example projects
